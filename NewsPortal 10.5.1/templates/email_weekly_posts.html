@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Posts</title>
+</head>
+<body>
+    <h1>Weekly Posts</h1>
+
+    <p>Check out the latest posts from the past week:</p>
+
+    {% for post in posts %}
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <p>Published on: {{ post.datetime_post }}</p>
+            <p>Author: {{ post.author }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+
+    <p>Visit the <a href="{{ Link }}">News Portal</a> for more.</p>
+
+</body>
+</html>
